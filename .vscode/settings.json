@@ -1,4 +1,7 @@
 {
     "workbench.colorTheme": "SynthWave '84",
-    "synthwave84.brightness": 0.1
+    "synthwave84.brightness": 0.1,
+    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
 }
