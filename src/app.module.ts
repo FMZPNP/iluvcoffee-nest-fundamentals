@@ -16,7 +16,7 @@ import { type } from 'os';
       password: 'pass123', // change to your password
       database: 'postgres', // change to your db name
       autoLoadEntities: true, // models will be loaded automatically (you don't have to explicitly specify the entities: [] array)
-      synchronize: true, // switch to false on prod
+      synchronize: false, // switch to false on prod
     })
   ],
   controllers: [AppController],
