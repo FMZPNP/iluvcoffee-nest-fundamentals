@@ -5,6 +5,7 @@ import { CoffeesModule } from './coffees/coffees.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { type } from 'os';
 import { CoffeeRatingModule } from './coffee-rating/coffee-rating.module';
+import { DatabaseModule } from './database/database.module';
 
 @Module({
   imports: [
@@ -19,7 +20,8 @@ import { CoffeeRatingModule } from './coffee-rating/coffee-rating.module';
       autoLoadEntities: true, // models will be loaded automatically (you don't have to explicitly specify the entities: [] array)
       synchronize: false, // switch to false on prod
     }),
-    CoffeeRatingModule
+    CoffeeRatingModule,
+    DatabaseModule
   ],
   controllers: [AppController],
   providers: [AppService],
