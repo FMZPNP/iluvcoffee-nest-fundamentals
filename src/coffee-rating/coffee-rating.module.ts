@@ -4,7 +4,7 @@ import { CoffeesModule } from 'src/coffees/coffees.module';
 import { DatabaseModule } from 'src/database/database.module';
 
 @Module({
-  imports: [DatabaseModule.register({ type: 'postgres', host: 'localhost', port: 5432 }), CoffeesModule],
+  imports: [/*DatabaseModule.register({ type: 'postgres', host: 'localhost', port: 5432, password: 'pass123' }),*/ CoffeesModule],
   providers: [CoffeeRatingService]
 })
 export class CoffeeRatingModule { }
