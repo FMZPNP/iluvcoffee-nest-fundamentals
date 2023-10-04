@@ -8,7 +8,12 @@ import { PaginationQueryDto } from 'src/common/dto/pagination-query.dto';
 import { Event } from 'src/events/entities/event.entity';
 import { COFFEE_BRANDS } from './coffees.constants';
 
-@Injectable({ scope: Scope.REQUEST })
+
+// Providers can have different type of scopes:
+// - Default (instantited only once, shared across the entire application)
+// - Transient (new instance of the provider is instantiaded for evey use)
+// - Request (scoped to the request) <- this one is useful for accessing the request object, but implies performance issues
+@Injectable({ scope: Scope.TRANSIENT })
 export class CoffeesService {
     constructor(
         @InjectRepository(Coffee)
