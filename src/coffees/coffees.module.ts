@@ -8,6 +8,7 @@ import { Event } from '../events/entities/event.entity';
 import { COFFEE_BRANDS } from './coffees.constants';
 import { Connection } from 'typeorm';
 import { ConfigModule } from '@nestjs/config';
+import coffesConfig from 'src/config/coffes.config';
 
 class ConfigService { }
 class DevelopmentConfigService { }
@@ -21,7 +22,7 @@ export class CoffeeBrandsFactory {
 }
 
 @Module({
-    imports: [TypeOrmModule.forFeature([Coffee, Flavor, Event]), ConfigModule],
+    imports: [TypeOrmModule.forFeature([Coffee, Flavor, Event]), ConfigModule.forFeature(coffesConfig)],
     controllers: [CoffeesController],
     providers: [CoffeesService, CoffeeBrandsFactory,
         {
